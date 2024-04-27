@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:great_escape/theme/colors.dart';
 import 'package:great_escape/ui/add-event.dart';
-import 'package:great_escape/ui/clock-in.dart';
-import 'package:great_escape/ui/clock-out.dart';
 import 'package:great_escape/ui/index.dart';
 import 'package:great_escape/ui/view-events.dart';
 
@@ -109,61 +107,6 @@ class _ScheduleEventState extends State<ScheduleEvent> {
                   child: const Center(
                     child: Text(
                       'View Events',
-                      style: TextStyle(
-                          fontSize: 16,
-                          fontFamily: 'Montaga',
-                          fontWeight: FontWeight.w700),
-                    ),
-                  ),
-                ),
-              ),
-              const SizedBox(
-                height: 40,
-              ),
-              GestureDetector(
-                onTap: () {
-                  Navigator.of(context).push(
-                    MaterialPageRoute(
-                      builder: (context) => const ClockIn(),
-                    ),
-                  );
-                },
-                child: Container(
-                  width: SizeConfig.screenWidth,
-                  padding: const EdgeInsets.only(top: 28, bottom: 28),
-                  decoration: BoxDecoration(
-                    color: purple100,
-                    borderRadius: BorderRadius.circular(4),
-                  ),
-                  child: const Center(
-                    child: Text(
-                      'Clock In',
-                      style: TextStyle(
-                          fontSize: 16,
-                          fontFamily: 'Montaga',
-                          fontWeight: FontWeight.w700),
-                    ),
-                  ),
-                ),
-              ),
-              const SizedBox(
-                height: 40,
-              ),
-              GestureDetector(
-                onTap: () {
-                  Navigator.of(context).push(MaterialPageRoute(
-                      builder: (context) => const ClockOut()));
-                },
-                child: Container(
-                  width: SizeConfig.screenWidth,
-                  padding: const EdgeInsets.only(top: 28, bottom: 28),
-                  decoration: BoxDecoration(
-                    color: purple100,
-                    borderRadius: BorderRadius.circular(4),
-                  ),
-                  child: const Center(
-                    child: Text(
-                      'Clock Out',
                       style: TextStyle(
                           fontSize: 16,
                           fontFamily: 'Montaga',

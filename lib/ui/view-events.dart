@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
+import 'package:great_escape/ui/clock-in.dart';
 import 'package:great_escape/ui/schedule-event.dart';
 
 import '../theme/colors.dart';
@@ -53,25 +55,31 @@ class _ViewEventsState extends State<ViewEvents> {
             const SizedBox(
               height: 30,
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                const Text(
-                  'New Event',
-                  style: TextStyle(
-                    fontFamily: 'Montaga',
-                    fontSize: 20,
+            GestureDetector(
+              onTap: () {
+                Navigator.of(context).push(
+                    MaterialPageRoute(builder: (context) => const ClockIn()));
+              },
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  const Text(
+                    'New Event',
+                    style: TextStyle(
+                      fontFamily: 'Montaga',
+                      fontSize: 20,
+                    ),
                   ),
-                ),
-                Container(
-                  width: 10,
-                  height: 10,
-                  decoration: const BoxDecoration(
-                    color: purple100,
-                    shape: BoxShape.circle,
+                  Container(
+                    width: 10,
+                    height: 10,
+                    decoration: const BoxDecoration(
+                      color: purple100,
+                      shape: BoxShape.circle,
+                    ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
             const SizedBox(
               height: 20,

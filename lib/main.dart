@@ -11,6 +11,7 @@ import 'package:great_escape/ui/connect.dart';
 import 'package:great_escape/ui/connecting.dart';
 import 'package:great_escape/ui/event-created.dart';
 import 'package:great_escape/ui/medications.dart';
+import 'package:great_escape/ui/menu.dart';
 import 'package:great_escape/ui/password.dart';
 import 'package:great_escape/ui/set-remainder.dart';
 import 'package:great_escape/ui/validation.dart';
@@ -70,9 +71,9 @@ class MyApp extends StatelessWidget {
         Activities.id: (context) => const Activities(),
         AddActivity.id: (context) => const AddActivity(),
         Connecting.id: (context) => const Connecting(),
-        Account.id:(context) => const Account(),
-        Password.id:(context) => const Password(),
-
+        Account.id: (context) => const Account(),
+        Password.id: (context) => const Password(),
+        Menu.id: (context) => const Menu(),
       },
     );
   }

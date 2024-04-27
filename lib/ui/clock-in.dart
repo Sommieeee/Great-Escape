@@ -31,6 +31,35 @@ class _ClockInState extends State<ClockIn> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              Row(
+                children: [
+                  GestureDetector(
+                      onTap: () {
+                        setState(() {
+                          Navigator.of(context).push(MaterialPageRoute(
+                              builder: (context) => const ScheduleEvent()));
+                        });
+                      },
+                      child: const Icon(
+                        Icons.arrow_back,
+                      )),
+                  const SizedBox(
+                    width: 60,
+                  ),
+                  const Center(
+                    child: Text(
+                      "Hair Appointment",
+                      style: TextStyle(
+                        fontFamily: "Montaga",
+                        fontSize: 25,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(
+                height: 30,
+              ),
               Center(
                 child: Image.asset("assets/images/map.png"),
               ),

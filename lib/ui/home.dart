@@ -4,6 +4,7 @@ import 'package:flutter/widgets.dart';
 import 'package:great_escape/theme/colors.dart';
 import 'package:great_escape/ui/activities.dart';
 import 'package:great_escape/ui/medications.dart';
+import 'package:great_escape/ui/menu.dart';
 import 'package:great_escape/ui/profile.dart';
 import 'package:great_escape/ui/schedule-event.dart';
 import 'package:great_escape/ui/set-remainder.dart';
@@ -248,6 +249,39 @@ class _HomeState extends State<Home> {
                               ),
                             ),
                             Image.asset('assets/images/vector.png'),
+                          ],
+                        ),
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 20,
+                    ),
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.of(context).push(MaterialPageRoute(
+                            builder: (context) => const Menu()));
+                      },
+                      child: Container(
+                        padding: const EdgeInsets.only(
+                          top: 25,
+                          bottom: 25,
+                          left: 15,
+                          right: 10,
+                        ),
+                        decoration: const BoxDecoration(
+                          color: purple100,
+                        ),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            const Text(
+                              'Today\'s Menu',
+                              style: TextStyle(
+                                fontFamily: "Montaga",
+                                fontSize: 17,
+                              ),
+                            ),
+                            Image.asset('assets/images/menu.png'),
                           ],
                         ),
                       ),
